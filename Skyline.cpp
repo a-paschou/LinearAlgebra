@@ -99,21 +99,10 @@ void Skyline::StoreSymmetricValues(std::vector<double>* values)
 			if ((values->at(row * numOfCols + j) == 0))
 			{
 				row += 1;
-				//if (row == j)
-				//{
-				//	temporarySet += j + 1 - row;
-				//	diagOfSets->push_back(temporarySet);
-				//}
-				//else
-				//{
-				//	row += 1;
-				//}
 			}
 			else
 			{
 				answer = false;
-				//temporarySet += j + 1 - row;
-				//diagOfSets->push_back(temporarySet);
 			}
 		} while (answer && (row != j));
 	}
@@ -155,21 +144,10 @@ void Skyline::StoreNonSymmetricValues(std::vector<double>* values)
 			if ((values->at(i * numOfCols + col) == 0))
 			{
 				col += 1;
-			/*	if (col == i)
-				{
-					temporarySet += i + 1 - col;
-					diagOfSets->push_back(temporarySet);
-				}
-				else
-				{
-					col += 1;
-				}*/
 			}
 			else
 			{
 				answer = false;
-				//temporarySet += i + 1 - col;
-				//diagOfSets->push_back(temporarySet);
 			}
 		} while (answer && (col != i));
 	}
